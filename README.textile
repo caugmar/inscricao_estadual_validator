@@ -1,0 +1,17 @@
+h1. InscricaoEstadualValidator
+
+CNPJ validation for ActiveModel
+
+h2. Installation
+
+<pre>gem "inscricao_estadual_validator"</pre>
+
+h2. Usage
+
+<pre>class Company < ActiveRecord::Base
+  validates :inscricao_estadual, :inscricao_estadual => true
+end</pre>
+
+h2. License
+
+Copyright (c) 2009-2011 Gabriel Sobrinho, released under the MIT license
