@@ -104,3 +104,14 @@ require 'estados/SP'
 require 'estados/SE'
 require 'estados/TO'
 
+class InscricaoEstadualValidator::InscricaoEstadual
+    def self.valid?(number)
+        valido = false
+        ValidacaoInscricaoEstadual.estados.each do |estado|
+            valido = eval("ValidacaoInscricaoEstadual::#{estado}.new(estado, number).valido?")
+            break if valido 
+        end
+        valido
+    end
+end
+
