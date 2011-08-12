@@ -78,6 +78,8 @@ module ValidacaoInscricaoEstadual
     end
 end
 
+$:.unshift(File.dirname(__FILE__) + '/')
+
 require 'estados/AC'
 require 'estados/AL'
 require 'estados/AP'
@@ -114,4 +116,3 @@ class InscricaoEstadualValidator::InscricaoEstadual
         valido
     end
 end
-
